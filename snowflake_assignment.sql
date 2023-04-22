@@ -69,6 +69,7 @@ select * from  sales_data_process_days;
 
 select process_days,
     case
+        when process_days <= 3 then 5
         when process_days > 3 and process_days <= 6 then 4
         when process_days > 6 and process_days <= 10 then 3
         else 2
